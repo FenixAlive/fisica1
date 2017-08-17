@@ -1,0 +1,136 @@
+
+ <!DOCTYPE html>
+  <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+      <style>
+      *{
+      font-size: 23px;
+      }
+      .fisica{
+      font-size: .7em;
+      display:inline-block;
+      text-align: left !important;
+      }
+      .titulo{
+      font-size: 1em;
+      display: block;
+      text-align: center;
+      padding: .7em;
+      }
+      .volver{
+      font-size: .9em;
+      text-align: right !important;
+      display:inline-block;
+      }
+      .nav{
+      padding: .3em !important;
+      margin: 0 !important;
+      }
+      .di{
+      border:1px solid #777;
+      }
+      p{
+      font-size:.7em;      
+      }
+.tri{
+height: 7em !important;
+text-align: center !important;
+}
+.med{
+font-size: .7em;
+}
+      @media display and(max-width:780px){
+        *{
+        font-size: 16px;
+        } 
+      }
+      @media display and(max-width:477px){
+        *{
+        font-size: 13px;
+        }
+      }
+      </style>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+    <!-- Navbar goes here -->
+  <nav class="nav-extended blue darken-3">
+    <div class="nav">
+      <a href="http://www.susyfis.esy.es" class="fisica left">Introducción a la Fisica</a>
+      <a href="../../index.html" class="volver right">Volver a Inicio</a>
+      <h1 class="titulo">Movimiento Rectilineo Uniforme</h1>
+    </div>
+    <div class="nav-content blue darken-1">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a class="active" href="#general">General</a></li>
+        <li class="tab"><a href="#distancia">Distancia</a></li>
+        <li class="tab"><a href="#tiempo">Tiempo</a></li>
+        <li class="tab"><a href="#velocidad">Velocidad</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="general" class="col s12">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+      <div class="center">Triangulo grafico para calculo</div>
+      <div class="triangulo">
+      <img src="https://image.slidesharecdn.com/s11c23unidadiimovimientorectilneouniformemru-120523145235-phpapp02/95/s11-c23-unidad-ii-movimiento-rectilneo-uniforme-mru-4-728.jpg?cb=1337784885" alt="triangulo mru" class="tri">
+      </div>
+      <p class="text">Para calcular se tapa el dato que se quiere obtener y los otros dos restantes en caso de estar en la misma linea se multiplican, si estan uno arriba de otro se dividen.</p>
+      </div>
+      <div class="col s12">
+      <div class="center">Medidas</div>
+      <section class="med">
+        d=distancia( m=metros , km=kilometros)
+        <br />
+        t=tiempo(s=segundos , h=horas)
+        <br>
+        v=velocidad(m/s , km/h)
+        <br>
+        Premisas:
+        <br>
+        a=aceleración(La aceleración siempre sera cero y constante.)
+        <br>
+        la velocidad es constante
+      </section>
+      </div>
+      <div class="col s12">
+      <div class="center">Formulas</div>
+      <section class="med">
+        t= d/v
+        <br>
+        d= t(v)
+        <br>
+        v= d/t
+      </section>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="distancia" class="col s12">
+    <div class="container">
+      <div class="row">
+      
+      </div>
+    </div>
+  </div>
+  <div id="tiempo" class="col s12">Test 3</div>
+  <div id="velocidad" class="col s12">Test 4</div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+
+    </body>
+  </html>
+
+

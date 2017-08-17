@@ -1,0 +1,22 @@
+html,body{
+  min-height:100%;
+}
+.author{
+text-align: center !important;
+}
+html, body{
+background-color: #e3f3f3;
+}
+a{
+color:#777 !important;
+}
+.boton{
+position:fixed;
+left:12px;
+top:12px;
+padding: 0 !important;
+margin: 0 !important;
+}
+.subheader{
+color: #999 !important;
+}
