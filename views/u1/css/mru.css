@@ -1,0 +1,50 @@
+*{
+      font-size: 23px;
+      }
+      .fisica{
+      font-size: .7em;
+      display:inline-block;
+      text-align: left !important;
+      }
+      .titulo{
+      font-size: 1em;
+      display: block;
+      text-align: center;
+      padding: .7em;
+      }
+      .volver{
+      font-size: .9em;
+      text-align: right !important;
+      display:inline-block;
+      }
+      .nav{
+      padding: .3em !important;
+      margin: 0 !important;
+      }
+      .title{
+      font-size: 1em;
+      }
+      p{
+      font-size:.7em;      
+      }
+.tri{
+height: 7em !important;
+text-align: center !important;
+}
+.med{
+font-size: .7em;
+}
+.res{
+  color:#f4f4f4 !important;
+  text-align: center !important;
+}
+@media display and(max-width:780px){
+        *{
+        font-size: 16px;
+        } 
+      }
+@media display and(max-width:477px){
+        *{
+        font-size: 13px;
+        }
+      }
