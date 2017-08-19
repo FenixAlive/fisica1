@@ -38,6 +38,13 @@ font-size: .7em;
   color:#f4f4f4 !important;
   text-align: center !important;
 }
+.volver{
+  padding: 10px;
+}
+.fisica{
+  padding: 10px;
+}
+
 @media display and(max-width:780px){
         *{
         font-size: 16px;

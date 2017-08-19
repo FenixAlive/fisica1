@@ -15,13 +15,13 @@
 
   <body>
       <!-- Navbar goes here -->
-    <nav class="nav-extended blue darken-3">
+    <nav class="nav-extended red darken-3">
       <div class="nav">
-        <a href="http://www.susyfis.esy.es" class="fisica left">Introducción a la Fisica</a>
-        <a href="../../index.html" class="volver right">Volver a Inicio</a>
+        <a href="http://www.susyfis.esy.es" class="fisica left hoverable">Introducción a la Fisica</a>
+        <a href="../../index.html" class="volver right hoverable">Volver a Inicio</a>
         <h1 class="titulo">Movimiento Rectilineo Uniformemente acelerado (variado)</h1>
       </div>
-      <div class="nav-content blue darken-1">
+      <div class="nav-content red darken-1">
         <ul class="tabs tabs-transparent">
           <li class="tab"><a class="active" href="#general">General</a></li>
           <li class="tab"><a href="#vel">Velocidades</a></li>
@@ -78,7 +78,7 @@
             <br>
             Vi= Vf-a(t)
             <br>
-            cuando no hay velocidad inicial
+            cuando la velocidad inicial es 0:
             <br>
             d= 0.5(a)t²
             <br>
@@ -94,26 +94,37 @@
       <div class="container">
         <div class="row">
           <h3 class="title center">
-            Calculo de la Distancia
+            Calculo de las Velocidades
           </h3>
           <div class="row">
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s6">
-                  <input id="dt" type="text" class="validate">
-                  <label for="dt">Tiempo</label>
+                  <input id="vt" type="text" class="validate">
+                  <label for="vt">Tiempo</label>
                 </div>
                 <div class="input-field col s6">
-                  <input id="dv" type="text" class="validate">
-                  <label for="dv">Velocidad</label>
+                  <input id="va" type="text" class="validate">
+                  <label for="va">Aceleración</label>
+                </div>
+                <br>
+                <p class="center">Llenar el dato de la velocidad que se tenga para obtener la faltante:</p>
+                <br>
+                <div class="input-field col s6">
+                  <input id="vi" type="text" class="validate">
+                  <label for="vi">Velocidad Inicial</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="vf" type="text" class="validate">
+                  <label for="vf">Velocidad Final</label>
                 </div>
               </div>
               <div class="row">
-                <button class="btn waves-effect waves-light" id="bd">Realizar calculo<i class="material-icons right">send</i></button>
+                <button class="btn waves-effect waves-light red darken-3" id="bv">Realizar calculo<i class="material-icons right">send</i></button>
               </div>
             </form>
             <div class="row">
-              <div class="col s12"><div id="rd"></div></div>
+              <div class="col s12"><div id="rv"></div></div>
             </div>
           </div>
         </div>
@@ -123,26 +134,40 @@
       <div class="container">
         <div class="row">
           <h3 class="title center">
-            Calculo de la Distancia
+            Calculo de la Aceleración
           </h3>
           <div class="row">
             <form class="col s12">
               <div class="row">
+                <br>
+                <p class="center">Calculo con Velocidad Inicial 0, no es necesario llenar campos de Velocidad</p>
+                <br>
                 <div class="input-field col s6">
-                  <input id="dt" type="text" class="validate">
-                  <label for="dt">Tiempo</label>
+                  <input id="at" type="text" class="validate">
+                  <label for="at">Tiempo</label>
                 </div>
                 <div class="input-field col s6">
-                  <input id="dv" type="text" class="validate">
-                  <label for="dv">Velocidad</label>
+                  <input id="ad" type="text" class="validate">
+                  <label for="ad">Distancia</label>
+                </div>
+                <br>
+                <p class="center">Calculo con Velocidad Inicial distinta a 0, llenar dato de tiempo y las siguientes velociades, sin llenar la distancia:</p>
+                <br>
+                <div class="input-field col s6">
+                  <input id="avi" type="text" class="validate">
+                  <label for="avi">Velocidad Inicial</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="avf" type="text" class="validate">
+                  <label for="avf">Velocidad Final</label>
                 </div>
               </div>
               <div class="row">
-                <button class="btn waves-effect waves-light" id="bd">Realizar calculo<i class="material-icons right">send</i></button>
+                <button class="btn waves-effect waves-light red darken-3" id="ba">Realizar calculo<i class="material-icons right">send</i></button>
               </div>
             </form>
             <div class="row">
-              <div class="col s12"><div id="rd"></div></div>
+              <div class="col s12"><div id="ra"></div></div>
             </div>
           </div>
         </div>
@@ -152,26 +177,40 @@
       <div class="container">
         <div class="row">
           <h3 class="title center">
-            Calculo de la Distancia
+            Calculo del Tiempo
           </h3>
           <div class="row">
             <form class="col s12">
               <div class="row">
+              <br>
+              <p class="center">Calculo con Velocidad inicial igual a 0, no es necesario llenar campos de Velocidades</p>
+              <br>
                 <div class="input-field col s6">
-                  <input id="dt" type="text" class="validate">
-                  <label for="dt">Tiempo</label>
+                  <input id="td" type="text" class="validate">
+                  <label for="td">Distancia</label>
                 </div>
                 <div class="input-field col s6">
-                  <input id="dv" type="text" class="validate">
-                  <label for="dv">Velocidad</label>
+                  <input id="ta" type="text" class="validate">
+                  <label for="ta">Aceleración</label>
+                </div>
+                <br>
+                <p class="center">Calculo con Velocidad inicial distinta a 0, llenar campo de Aceleración y Velocidades, sin llenar distancia.</p>
+                <br>
+                <div class="input-field col s6">
+                  <input id="tvi" type="text" class="validate">
+                  <label for="tvi">Velocidad Inicial</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="tvf" type="text" class="validate">
+                  <label for="tvf">Velocidad Final</label>
                 </div>
               </div>
               <div class="row">
-                <button class="btn waves-effect waves-light" id="bd">Realizar calculo<i class="material-icons right">send</i></button>
+                <button class="btn waves-effect waves-light red darken-3" id="bt">Realizar calculo<i class="material-icons right">send</i></button>
               </div>
             </form>
             <div class="row">
-              <div class="col s12"><div id="rd"></div></div>
+              <div class="col s12"><div id="rt"></div></div>
             </div>
           </div>
         </div>
@@ -191,12 +230,16 @@
                   <label for="dt">Tiempo</label>
                 </div>
                 <div class="input-field col s6">
-                  <input id="dv" type="text" class="validate">
-                  <label for="dv">Velocidad</label>
+                  <input id="dvi" type="text" class="validate">
+                  <label for="dvi">Velocidad Inicial</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="da" type="text" class="validate">
+                  <label for="da">Aceleración</label>
                 </div>
               </div>
               <div class="row">
-                <button class="btn waves-effect waves-light" id="bd">Realizar calculo<i class="material-icons right">send</i></button>
+                <button class="btn waves-effect waves-light red darken-3" id="bd">Realizar calculo<i class="material-icons right">send</i></button>
               </div>
             </form>
             <div class="row">
@@ -206,11 +249,24 @@
         </div>
       </div>
     </div>
+  <footer class="page-footer red">
+  <div class="container">
+    <div class="row">
+      <div class="center med">Universidad de Guadalajara</div>
+      <div class="center med">CUCEI</div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container author center med">
+     ©2017 Luis Angel Muñoz Franco (<span class="med">FenixAlive</span>)
+    </div>
+  </div>
+  </footer>
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-      <script src="js/mru.js"></script>
+      <script src="js/mrua.js"></script>
   </body>
 </html>
 
