@@ -5,20 +5,20 @@ $(function(){
 		var va=$("#va").val();
 		var vi=$("#vi").val();
 		var vf=$("#vf").val();
+		var rv="Es necesario llenar una de las velocidades";
 		if(vf){
-			var rv=vf-va*vt;
+		rv=vf-(va*vt);
 		$("#rv").empty();
-		$("#rv").append('<div class="card-panel small red darken-3 res">Velocidad Inicial: '+rv+'</div>')
+		$("#rv").append('<div class="card-panel small red darken-3 res">Velocidad Inicial: '+rv+'</div>');
 		}else if(vi){
-			console.log("vi")
-			var rv=vi+va*vt;
+		rv=Number(vi)+Number(va*vt);
 		$("#rv").empty();
-		$("#rv").append('<div class="card-panel small red darken-3 res">Velocidad Final: '+rv+'</div>')
+		$("#rv").append('<div class="card-panel small red darken-3 res">Velocidad Final: '+rv+'</div>');
 		}else{
-			console.log("sin velocidades")
+		rv="Es necesario llenar una de las velocidades"
 		$("#rv").empty();
-		$("#rv").append('<div class="card-panel small red darken-3 res">Es necesario llenar una velocidad.</div>')
-		}		
+		$("#rv").append('<div class="card-panel small red darken-3 res">'+rv+'</div>');
+		}
 		$(":text").each(function(){	
 			$($(this)).val('');
 		});
