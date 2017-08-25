@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+  <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+      <title>Tiro Vertical</title>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="css/mru.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+  <body>
+      <!-- Navbar goes here -->
+    <nav class="nav-extended yellow darken-3">
+      <div class="nav">
+        <a href="http://www.susyfis.esy.es" class="fisica left hoverable">Introducción a la Fisica</a>
+        <a href="../../index.html" class="volver right hoverable">Volver a Inicio</a>
+        <h1 class="titulo">Tiro Vertical</h1>
+      </div>
+      <div class="nav-content yellow darken-1">
+        <ul class="tabs tabs-transparent">
+          <li class="tab"><a class="active black-text" href="#general">General</a></li>
+          <li class="tab"><a href="#vel" class="black-text">Velocidad Inicial</a></li>
+          <li class="tab"><a href="#altura" class="black-text">Altura</a></li>
+          <li class="tab"><a href="#tiempo" class="black-text">Tiempo</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="general" class="col s12">
+      <div class="container top">
+        <div class="row">
+          <div class="col s12">
+            <div class="center">Premisas</div>
+            <section class="med">
+            Vi > 0
+            <br>
+            Vf = 0
+            <br>
+            Si la altura da negativa  se debe dejar en 0, a menos que se especifique lo contrario.
+            <br />
+            g= Gravedad (Para estos ejercicios se tomará un valor de 9.81 m/s²)
+            <br>
+            </section>
+          </div>
+          <div class="col s12">
+            <div class="center top">Formulas</div>
+            <section class="med">
+            Ojo: Los signos son contrarios al mrua.
+            <br>
+            Vf-Vi = -(g)t  
+            <br>
+            Vi = (g)t
+            <br>
+            h = Vi(t)-0.5(g)t²
+            <br>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="vel" class="col s12">
+      <div class="container">
+        <div class="row">
+          <h3 class="title center">
+            Calculo de la Velocidad Inicial
+          </h3>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="vt" type="text" class="validate">
+                  <label for="vt">Tiempo</label>
+                </div>
+              </div>
+              <div class="row">
+                <button class="btn waves-effect waves-light yellow darken-3" id="bv">Realizar calculo<i class="material-icons right">send</i></button>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col s12"><div id="rv"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="altura" class="col s12">
+      <div class="container">
+        <div class="row">
+          <h3 class="title center">
+            Calculo de la Altura
+          </h3>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="hvi" type="text" class="validate">
+                  <label for="hvi">Velocidad Inicial</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="ht" type="text" class="validate">
+                  <label for="ht">Tiempo</label>
+                </div>
+              </div>
+              <div class="row">
+                <button class="btn waves-effect waves-light yellow darken-3" id="bh">Realizar calculo<i class="material-icons right">send</i></button>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col s12"><div id="rh"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="tiempo" class="col s12">
+      <div class="container">
+        <div class="row">
+          <h3 class="title center">
+            Calculo del Tiempo
+          </h3>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+              <br>
+                <div class="input-field col s6">
+                  <input id="tvi" type="text" class="validate">
+                  <label for="tvi">Velocidad Inicial</label>
+                </div>
+              </div>
+              <div class="row">
+                <button class="btn waves-effect waves-light yellow darken-3" id="bt">Realizar calculo<i class="material-icons right">send</i></button>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col s12"><div id="rt"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <footer class="page-footer yellow">
+  <div class="container">
+    <div class="row">
+      <div class="center med black-text">Universidad de Guadalajara</div>
+      <div class="center med black-text">CUCEI</div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container author center med black-text">
+     ©2017 Luis Angel Muñoz Franco (<span class="med">FenixAlive</span>)
+    </div>
+  </div>
+  </footer>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+      <script src="js/tiroVertical.js"></script>
+  </body>
+</html>
+
+

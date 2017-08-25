@@ -3,7 +3,7 @@
   <html lang="es">
     <head>
     <meta charset="UTF-8">
-      <title>Movimiento Rectilineo Uniforme</title>
+      <title>Tiro Parabolico</title>
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Compiled and minified CSS -->
@@ -15,114 +15,122 @@
 
   <body>
       <!-- Navbar goes here -->
-    <nav class="nav-extended blue darken-3">
+    <nav class="nav-extended purple darken-3">
       <div class="nav">
         <a href="http://www.susyfis.esy.es" class="fisica left hoverable">Introducción a la Fisica</a>
         <a href="../../index.html" class="volver right hoverable">Volver a Inicio</a>
-        <h1 class="titulo">Movimiento Rectilineo Uniforme</h1>
+        <h1 class="titulo">Tiro Parabolico</h1>
       </div>
-      <div class="nav-content blue darken-1">
+      <div class="nav-content purple darken-1">
         <ul class="tabs tabs-transparent">
           <li class="tab"><a class="active" href="#general">General</a></li>
-          <li class="tab"><a href="#distancia">Distancia</a></li>
-          <li class="tab"><a href="#tiempo">Tiempo</a></li>
-          <li class="tab"><a href="#velocidad">Velocidad</a></li>
+          <li class="tab"><a href="#vel" class="">Velocidad Inicial</a></li>
+          <li class="tab"><a href="#altura" class="">Altura</a></li>
+          <li class="tab"><a href="#tiempo" class="">Tiempo</a></li>
+          <li class="tab"><a href="#tiempo" class="">Tabla</a></li>
         </ul>
       </div>
     </nav>
     <div id="general" class="col s12">
-      <div class="container">
+      <div class="container top">
         <div class="row">
           <div class="col s12">
-            <div class="center">Triangulo grafico para realizar el calculo</div>
-            <div class="triangulo">
-              <img src="img/trimpu.png" alt="triangulo movimiento rectilineo uniforme" class="tri">
-            </div>
-            <p class="text">Para calcular se tapa el dato que se quiere obtener y los otros dos restantes en caso de estar en la misma linea se multiplican, si estan uno arriba de otro se dividen.</p>
-          </div>
-          <div class="col s12">
-            <div class="center">Medidas</div>
+            <div class="center">Premisas</div>
             <section class="med">
-            d=distancia( m=metros , km=kilometros)
+            Vi > 0
+            <br>
+            Vf = 0
+            <br>
+            ° = angulo.
+            <br>
+            En este movimiento vamos a necesitar el angulo de tiro y se deberá descomponer el movimiento en su eje x y eje y
             <br />
-            t=tiempo(s=segundos , h=horas)
+            g= Gravedad (Para estos ejercicios se tomará un valor de 9.81 m/s²)
             <br>
-            v=velocidad(m/s , km/h)
+            El movimiento se descompone en X como un mru y en Y como un mrua.
             <br>
-            Premisas:
-            <br>
-            a=aceleración(La aceleración siempre sera cero y constante.)
-            <br>
-            la velocidad es constante
             </section>
           </div>
           <div class="col s12">
-            <div class="center">Formulas</div>
+            <div class="center top">Formulas</div>
             <section class="med">
-            t= d/v
             <br>
-            d= t(v)
+            <center>Para X</center>
             <br>
-            v= d/t
+            Vix = Vi(cos°)  
+            <br>
+            dx = (Vix)t
+            <br>
+            h = Vi(t)-0.5(g)t²
+            <br>
+            <center>Para Y:</center>
+            <br>
+            Viy = Vi(sen°)
+            <br>
+            Vy = (Viy)-g(t) (Velocidad en un punto en el tiempo)
+            <br>
+            h = Viy(t)-0.5(g)t²
+            <br>
+            <center>En General</center>
+            <br>
+            t = √2h/g
+            <br>
+            t = Viy/g
+            <br>
             </section>
           </div>
         </div>
       </div>
     </div>
-
-    <div id="distancia" class="col s12">
+    <div id="vel" class="col s12">
       <div class="container">
         <div class="row">
           <h3 class="title center">
-            Calculo de la Distancia
+            Calculo de la Velocidad Inicial
           </h3>
           <div class="row">
             <form class="col s12">
               <div class="row">
-                <div class="input-field col s6">
-                  <input id="dt" type="text" class="validate">
-                  <label for="dt">Tiempo</label>
-                </div>
-                <div class="input-field col s6">
-                  <input id="dv" type="text" class="validate">
-                  <label for="dv">Velocidad</label>
-                </div>
-              </div>
-              <div class="row">
-                <button class="btn waves-effect waves-light" id="bd">Realizar calculo<i class="material-icons right">send</i></button>
-              </div>
-            </form>
-            <div class="row">
-              <div class="col s12"><div id="rd"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="velocidad" class="col s12">
-      <div class="container">
-        <div class="row">
-          <h3 class="title center">
-            Calculo de la Velocidad
-          </h3>
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s6">
-                  <input id="vd" type="text" class="validate">
-                  <label for="vd">Distancia</label>
-                </div>
                 <div class="input-field col s6">
                   <input id="vt" type="text" class="validate">
                   <label for="vt">Tiempo</label>
                 </div>
               </div>
               <div class="row">
-                <button class="btn waves-effect waves-light" id="bv">Realizar calculo<i class="material-icons right">send</i></button>
+                <button class="btn waves-effect waves-light purple darken-3" id="bv">Realizar calculo<i class="material-icons right">send</i></button>
               </div>
             </form>
             <div class="row">
               <div class="col s12"><div id="rv"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="altura" class="col s12">
+      <div class="container">
+        <div class="row">
+          <h3 class="title center">
+            Calculo de la Altura
+          </h3>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="hvi" type="text" class="validate">
+                  <label for="hvi">Velocidad Inicial</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="ht" type="text" class="validate">
+                  <label for="ht">Tiempo</label>
+                </div>
+              </div>
+              <div class="row">
+                <button class="btn waves-effect waves-light purple darken-3" id="bh">Realizar calculo<i class="material-icons right">send</i></button>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col s12"><div id="rh"></div></div>
             </div>
           </div>
         </div>
@@ -134,30 +142,27 @@
           <h3 class="title center">
             Calculo del Tiempo
           </h3>
-        <div class="row">
-          <form class="col s12">
-        <div class="row">
-          <div class="input-field col s6">
-            <input id="td" type="text" class="validate">
-            <label for="td">Distancia</label>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+              <br>
+                <div class="input-field col s6">
+                  <input id="tvi" type="text" class="validate">
+                  <label for="tvi">Velocidad Inicial</label>
+                </div>
+              </div>
+              <div class="row">
+                <button class="btn waves-effect waves-light purple darken-3" id="bt">Realizar calculo<i class="material-icons right">send</i></button>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col s12"><div id="rt"></div></div>
+            </div>
           </div>
-          <div class="input-field col s6">
-            <input id="tv" type="text" class="validate">
-            <label for="tv">Velocidad</label>
-          </div>
-        </div>
-       <div class="row">
-         <button class="btn waves-effect waves-light" id="bt">Realizar calculo<i class="material-icons right">send</i></button>
-       </div>
-          </form>
-        <div class="row">
-          <div class="col s12"><div id="rt"></div></div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-  <footer class="page-footer teal">
+  <footer class="page-footer purple">
   <div class="container">
     <div class="row">
       <div class="center med">Universidad de Guadalajara</div>
@@ -174,8 +179,6 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-      <script src="js/mru.js"></script>
+      <script src="js/tiroParabolico.js"></script>
   </body>
 </html>
-
-

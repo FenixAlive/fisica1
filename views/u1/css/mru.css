@@ -44,7 +44,12 @@ font-size: .7em;
 .fisica{
   padding: 10px;
 }
-
+.top{
+  padding-top: 33px;
+}
+center{
+  font-size: 1em;
+}
 @media display and(max-width:780px){
         *{
         font-size: 16px;

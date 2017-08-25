@@ -1,5 +1,7 @@
 html,body{
   min-height:100%;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 .author{
 text-align: center !important;
@@ -19,4 +21,7 @@ margin: 0 !important;
 }
 .subheader{
 color: #999 !important;
+}
+main{
+	padding-bottom: 77px;
 }
