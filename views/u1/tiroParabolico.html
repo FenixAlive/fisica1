@@ -17,17 +17,17 @@
       <!-- Navbar goes here -->
     <nav class="nav-extended purple darken-3">
       <div class="nav">
-        <a href="http://www.susyfis.esy.es" class="fisica left hoverable">Introducción a la Fisica</a>
-        <a href="../../index.html" class="volver right hoverable">Volver a Inicio</a>
-        <h1 class="titulo">Tiro Parabolico</h1>
+        <a href="http://www.susyfis.esy.es" class="fisica hoverable">Introducción a la Fisica</a>
+        <a href="../../index.html" class="volver hoverable">Volver a Inicio</a>
+        <h1 class="titulo center">Tiro Parabolico</h1>
       </div>
       <div class="nav-content purple darken-1">
         <ul class="tabs tabs-transparent">
           <li class="tab"><a class="active" href="#general">General</a></li>
-          <li class="tab"><a href="#vel" class="">Velocidad Inicial</a></li>
-          <li class="tab"><a href="#altura" class="">Altura</a></li>
+          <li class="tab"><a href="#vel" class="">Velocidad</a></li>
+          <li class="tab"><a href="#altura" class="">Altura y Distancia</a></li>
           <li class="tab"><a href="#tiempo" class="">Tiempo</a></li>
-          <li class="tab"><a href="#tiempo" class="">Tabla</a></li>
+          <li class="tab"><a href="#tabla" class="">Tabla</a></li>
         </ul>
       </div>
     </nav>
@@ -59,6 +59,8 @@
             <br>
             Vix = Vi(cos°)  
             <br>
+            Vx = Vix  
+            <br>
             dx = (Vix)t
             <br>
             h = Vi(t)-0.5(g)t²
@@ -86,14 +88,18 @@
       <div class="container">
         <div class="row">
           <h3 class="title center">
-            Calculo de la Velocidad Inicial
+            Calculo de la Velocidad Inicial por eje
           </h3>
           <div class="row">
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s6">
-                  <input id="vt" type="text" class="validate">
-                  <label for="vt">Tiempo</label>
+                  <input id="vi" type="text" class="validate">
+                  <label for="vi">Velocidad Inicial</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="va" type="text" class="validate">
+                  <label for="va">Angulo</label>
                 </div>
               </div>
               <div class="row">
@@ -104,6 +110,32 @@
               <div class="col s12"><div id="rv"></div></div>
             </div>
           </div>
+          <h3 class="title center">
+            Calculo de la Velocidad en un tiempo especifico por eje.
+          </h3>
+          <br>
+          <p>Vx (para cualquier tiempo)= Vix (ya calculada arriba)</p>
+          <br>
+          <p>Velocidad en Y: </p>
+          <br>
+          <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="vyi" type="text" class="validate">
+                  <label for="vyi">Velocidad Inicial en Y</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="vyt" type="text" class="validate">
+                  <label for="vyt">Tiempo</label>
+                </div>
+              </div>
+              <div class="row">
+                <button class="btn waves-effect waves-light purple darken-3" id="bvy">Realizar calculo<i class="material-icons right">send</i></button>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col s12"><div id="rvy"></div></div>
+            </div>
         </div>
       </div>
     </div>
@@ -111,14 +143,37 @@
       <div class="container">
         <div class="row">
           <h3 class="title center">
-            Calculo de la Altura
+            Calculo de la Distancia (distancia Eje X)
           </h3>
           <div class="row">
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s6">
-                  <input id="hvi" type="text" class="validate">
-                  <label for="hvi">Velocidad Inicial</label>
+                  <input id="hvix" type="text" class="validate">
+                  <label for="hvix">Velocidad Inicial en X</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="htx" type="text" class="validate">
+                  <label for="htx">Tiempo</label>
+                </div>
+              </div>
+              <div class="row">
+                <button class="btn waves-effect waves-light purple darken-3" id="bhx">Realizar calculo<i class="material-icons right">send</i></button>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col s12"><div id="rhx"></div></div>
+            </div>
+          </div>
+          <h3 class="title center">
+            Calculo de la Altura (distancia Eje Y)
+          </h3>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="hviy" type="text" class="validate"> 
+                  <label for="hviy">Velocidad Inicial en Y</label>
                 </div>
                 <div class="input-field col s6">
                   <input id="ht" type="text" class="validate">
@@ -126,11 +181,11 @@
                 </div>
               </div>
               <div class="row">
-                <button class="btn waves-effect waves-light purple darken-3" id="bh">Realizar calculo<i class="material-icons right">send</i></button>
+                <button class="btn waves-effect waves-light purple darken-3" id="bhy">Realizar calculo<i class="material-icons right">send</i></button>
               </div>
             </form>
             <div class="row">
-              <div class="col s12"><div id="rh"></div></div>
+              <div class="col s12"><div id="rhy"></div></div>
             </div>
           </div>
         </div>
@@ -148,7 +203,7 @@
               <br>
                 <div class="input-field col s6">
                   <input id="tvi" type="text" class="validate">
-                  <label for="tvi">Velocidad Inicial</label>
+                  <label for="tviy">Velocidad Inicial en Y</label>
                 </div>
               </div>
               <div class="row">
@@ -157,6 +212,36 @@
             </form>
             <div class="row">
               <div class="col s12"><div id="rt"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="tabla" class="col s12">
+      <div class="container">
+        <div class="row">
+          <h3 class="title center">
+            Tabla de Resultados en 10 distintos puntos.
+          </h3>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+              <br>
+                <div class="input-field col s6">
+                  <input id="tavi" type="text" class="validate">
+                  <label for="tavi">Velocidad Inicial</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="taa" type="text" class="validate">
+                  <label for="taa">Angulo</label>
+                </div>
+              </div>
+              <div class="row">
+                <button class="btn waves-effect waves-light purple darken-3" id="bta">Realizar calculo<i class="material-icons right">send</i></button>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col s12"><div id="rta"></div></div>
             </div>
           </div>
         </div>

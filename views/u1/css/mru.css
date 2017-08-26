@@ -1,21 +1,26 @@
-*{
+      *{
       font-size: 23px;
       }
       .fisica{
       font-size: .7em;
       display:inline-block;
-      text-align: left !important;
+      text-align: center !important;
+      padding: 10px;
+      width: 47%;
       }
       .titulo{
       font-size: 1em;
       display: block;
+      overflow: hidden;
       text-align: center;
-      padding: .7em;
+      width: 100%;
       }
       .volver{
       font-size: .9em;
-      text-align: right !important;
+      text-align: center !important;
       display:inline-block;
+      padding: 10px;
+      width: 47%;
       }
       .nav{
       padding: .3em !important;
@@ -27,6 +32,15 @@
       p{
       font-size:.7em;      
       }
+.table{
+  font-size: .7em;
+}
+th,td{
+  font-size: .7em;
+  text-align: center;
+  color: black;
+  border: 1px solid #6a1b9a;
+}
 .tri{
 height: 7em !important;
 text-align: center !important;
@@ -38,25 +52,25 @@ font-size: .7em;
   color:#f4f4f4 !important;
   text-align: center !important;
 }
-.volver{
-  padding: 10px;
-}
-.fisica{
-  padding: 10px;
-}
 .top{
   padding-top: 33px;
 }
 center{
   font-size: 1em;
 }
-@media display and(max-width:780px){
+@media screen and (max-width: 770px){
         *{
-        font-size: 16px;
+        font-size: 17px;
         } 
+        .fisica, .volver{
+          display: block !important;
+          width: 100% !important;
+        }
+
       }
-@media display and(max-width:477px){
+@media screen and (max-width: 477px){
         *{
         font-size: 13px;
         }
+       
       }
