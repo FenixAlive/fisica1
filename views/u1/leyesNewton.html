@@ -1,273 +1,187 @@
 
 <!DOCTYPE html>
-  <html lang="es">
+<html lang="es">
     <head>
-    <meta charset="UTF-8">
-      <title>Leyes de Newton</title>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-      <link rel="stylesheet" type="text/css" href="css/mru.css">
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	    <meta charset="UTF-8">
+	    <title>Leyes de Newton</title>
+	      <!--Import Google Icon Font-->
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  	<!-- Compiled and minified CSS -->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+	    <link rel="stylesheet" type="text/css" href="css/mru.css">
+	    <!--Let browser know website is optimized for mobile-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-  <body>
+	<body>
       <!-- Navbar goes here -->
-    <nav class="nav-extended cyan darken-3">
-      <div class="nav">
-        <a href="http://www.susyfis.esy.es" class="fisica left hoverable">Introducción a la Fisica</a>
-        <a href="../../index.html" class="volver right hoverable">Volver a Inicio</a>
-        <h1 class="titulo">Leyes de Newton</h1>
-      </div>
-      <div class="nav-content cyan darken-1">
-        <ul class="tabs tabs-transparent">
-          <li class="tab"><a class="active" href="#general">General</a></li>
-          <li class="tab"><a href="#fuerza">Fuerza</a></li>
-          <li class="tab"><a href="#impulso">Impulso</a></li>
-          <li class="tab"><a href="#trabajo">Trabajo</a></li>
-          <li class="tab"><a href="#potencia">Potencia</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div id="general" class="col s12">
-      <div class="container">
-        <div class="row">
-          <div class="col s12">
-            <div class="center top">Triangulo grafico para realizar el calculo</div>
-            <div class="triangulo">
-              <img src="img/trimpua.png" alt="triangulo movimiento rectilineo uniforme" class="tri">
-            </div>
-            <p class="text">Para calcular se tapa el dato que se quiere obtener y los otros dos restantes en caso de estar en la misma linea se multiplican, si estan uno arriba de otro se dividen.</p>
-          </div>
-          <div class="col s12">
-            <div class="center">Medidas</div>
-            <section class="med">
-            d=distancia( m=metros , km=kilometros)
-            <br />
-            t=tiempo(s=segundos , h=horas)
-            <br>
-            v=velocidad(m/s , km/h)
-            <br>
-            a=aceleración(m/s² , km/h²)
-            <br>
-            <br>
-            Premisas:
-            <br>
-            a=aceleración(La aceleración será distinta de cero y constante.)
-            <br>
-            la velocidad no será constante.
-            <br>
-            el tiempo siempre será positivo.
-            <br>
-            </section>
-          </div>
-          <div class="col s12">
-            <div class="center">Formulas</div>
-            <section class="med">
-            t= (Vf-Vi)/a
-            <br>
-            a= (Vf-Vi)/t
-            <br>
-            d= (Vi . t)+ 0.5(a)t²
-            <br>
-            Vf-Vi= a(t)
-            <br>
-            Vf= a(t)+Vi
-            <br>
-            Vi= Vf-a(t)
-            <br>
-            cuando la velocidad inicial es 0:
-            <br>
-            d= 0.5(a)t²
-            <br>
-            a= d/0.5(t²)
-            <br>
-            t= √d/0.5(a)
-            </section>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="vel" class="col s12">
-      <div class="container">
-        <div class="row">
-          <h3 class="title center">
-            Calculo de las Velocidades
-          </h3>
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s6">
-                  <input id="vt" type="text" class="validate">
-                  <label for="vt">Tiempo</label>
-                </div>
-                <div class="input-field col s6">
-                  <input id="va" type="text" class="validate">
-                  <label for="va">Aceleración</label>
-                </div>
-                <br>
-                <p class="center">Llenar el dato de la velocidad que se tenga para obtener la faltante:</p>
-                <br>
-                <div class="input-field col s6">
-                  <input id="vi" type="text" class="validate">
-                  <label for="vi">Velocidad Inicial</label>
-                </div>
-                <div class="input-field col s6">
-                  <input id="vf" type="text" class="validate">
-                  <label for="vf">Velocidad Final</label>
-                </div>
-              </div>
-              <div class="row">
-                <button class="btn waves-effect waves-light cyan darken-3" id="bv">Realizar calculo<i class="material-icons right">send</i></button>
-              </div>
-            </form>
-            <div class="row">
-              <div class="col s12"><div id="rv"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="acel" class="col s12">
-      <div class="container">
-        <div class="row">
-          <h3 class="title center">
-            Calculo de la Aceleración
-          </h3>
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <br>
-                <p class="center">Calculo con Velocidad Inicial 0, no es necesario llenar campos de Velocidad</p>
-                <br>
-                <div class="input-field col s6">
-                  <input id="at" type="text" class="validate">
-                  <label for="at">Tiempo</label>
-                </div>
-                <div class="input-field col s6">
-                  <input id="ad" type="text" class="validate">
-                  <label for="ad">Distancia</label>
-                </div>
-                <br>
-                <p class="center">Calculo con Velocidad Inicial distinta a 0, llenar dato de tiempo y las siguientes velociades, sin llenar la distancia:</p>
-                <br>
-                <div class="input-field col s6">
-                  <input id="avi" type="text" class="validate">
-                  <label for="avi">Velocidad Inicial</label>
-                </div>
-                <div class="input-field col s6">
-                  <input id="avf" type="text" class="validate">
-                  <label for="avf">Velocidad Final</label>
-                </div>
-              </div>
-              <div class="row">
-                <button class="btn waves-effect waves-light cyan darken-3" id="ba">Realizar calculo<i class="material-icons right">send</i></button>
-              </div>
-            </form>
-            <div class="row">
-              <div class="col s12"><div id="ra"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="tiempo" class="col s12">
-      <div class="container">
-        <div class="row">
-          <h3 class="title center">
-            Calculo del Tiempo
-          </h3>
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-              <br>
-              <p class="center">Calculo con Velocidad inicial igual a 0, no es necesario llenar campos de Velocidades</p>
-              <br>
-                <div class="input-field col s6">
-                  <input id="td" type="text" class="validate">
-                  <label for="td">Distancia</label>
-                </div>
-                <div class="input-field col s6">
-                  <input id="ta" type="text" class="validate">
-                  <label for="ta">Aceleración</label>
-                </div>
-                <br>
-                <p class="center">Calculo con Velocidad inicial distinta a 0, llenar campo de Aceleración y Velocidades, sin llenar distancia.</p>
-                <br>
-                <div class="input-field col s6">
-                  <input id="tvi" type="text" class="validate">
-                  <label for="tvi">Velocidad Inicial</label>
-                </div>
-                <div class="input-field col s6">
-                  <input id="tvf" type="text" class="validate">
-                  <label for="tvf">Velocidad Final</label>
-                </div>
-              </div>
-              <div class="row">
-                <button class="btn waves-effect waves-light cyan darken-3" id="bt">Realizar calculo<i class="material-icons right">send</i></button>
-              </div>
-            </form>
-            <div class="row">
-              <div class="col s12"><div id="rt"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="distancia" class="col s12">
-      <div class="container">
-        <div class="row">
-          <h3 class="title center">
-            Calculo de la Distancia
-          </h3>
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s6">
-                  <input id="dt" type="text" class="validate">
-                  <label for="dt">Tiempo</label>
-                </div>
-                <div class="input-field col s6">
-                  <input id="dvi" type="text" class="validate">
-                  <label for="dvi">Velocidad Inicial</label>
-                </div>
-                <div class="input-field col s6">
-                  <input id="da" type="text" class="validate">
-                  <label for="da">Aceleración</label>
-                </div>
-              </div>
-              <div class="row">
-                <button class="btn waves-effect waves-light cyan darken-3" id="bd">Realizar calculo<i class="material-icons right">send</i></button>
-              </div>
-            </form>
-            <div class="row">
-              <div class="col s12"><div id="rd"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <footer class="page-footer cyan">
-  <div class="container">
-    <div class="row">
-      <div class="center med">Universidad de Guadalajara</div>
-      <div class="center med">CUCEI</div>
-    </div>
-  </div>
-  <div class="footer-copyright">
-    <div class="container author center med">
-     ©2017 Luis Angel Muñoz Franco (<span class="med">FenixAlive</span>)
-    </div>
-  </div>
-  </footer>
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <!-- Compiled and minified JavaScript -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-      <script src="js/mrua.js"></script>
-  </body>
+	    <nav class="nav-extended cyan darken-3">
+	        <div class="nav">
+		        <a href="http://www.susyfis.esy.es" class="fisica left hoverable">Introducción a la Fisica</a>
+		        <a href="../../index.html" class="volver right hoverable">Volver a Inicio</a>
+		        <h1 class="titulo">Leyes de Newton</h1>
+	        </div>
+	        <div class="nav-content cyan darken-1">
+		        <ul class="tabs tabs-transparent">
+		          <li class="tab"><a class="active" href="#general">General</a></li>
+		          <li class="tab"><a href="#cal">Calculo</a></li>
+		        </ul>
+	        </div>
+	    </nav>
+	    <div id="general" class="col s12">
+	      	<div class="container">
+	        	<div class="row">
+	          		<div class="col s12">
+	            		<div class="center top">Primera Ley de Newton</div>
+	            		<p class="text">Un cuerpo en reposo o en MRU no cambiará su estado a menos que se le aplique una fuerza externa.</p>
+	            		<div class="center top">Segunda Ley de Newton</div>
+	            		<p class="text">La fuerza es directamente proporcional a la masa por la aceleración del cuerpo en cuestión.</p>
+	            		<div class="center top">Tercera Ley de Newton</div>
+	            		<p class="text">A toda acción le corresponde una reacción directamente proporcional en sentido contrario.</p>
+	         		</div>
+			        <div class="col s12">
+			        	<div class="center">Medidas</div>
+			            <section class="med">
+			            	<br>
+			            	para estas formulas se considera que la velocidad inicial es 0
+				            <br>
+				            ° = angulo (Grados)
+				            <br>
+				            g = Gravedad (en la formula de distancia cuando haya gravedad ponerla en negativo) (revisar si vale 10 o 9.81 para el ejercicio)
+				            <br>
+				            N = Newton
+				            <br>
+				            W = trabajo (Mayuscula)
+				            <br>
+				            I = Impulso
+				            <br>
+				            P = Potencia
+				            <br>
+				            Fr = Fuerza Resultante
+				            <br>
+				            w = Watts (Minuscula)
+				            <br>
+				            Nota: Convertir siempre los datos a metros, a segundos y a Kilogamos.
+				            <br>
+			            </section>
+			        </div>
+			        <div class="col s12">
+			            <div class="center">Formulas</div>
+			            <section class="med">
+			            F = m(a)
+			            <br>
+			                 Fx = Σ F(cos(°))
+			            <br>
+			            Fy = Σ F(sin(°))-m(g)
+			            <br>
+			            Fr = √Fx²+Fy²
+			            <br>
+			             ° = tan^-1(Fy/Fx)
+						<br>
+						Nota-para sacar el angulo resultante, ademas de la formula anterior es necesario ver las siguientes reglas:
+						<br>
+						Cuadrante 1 =(Fx = + & Fy = + ), el resultado no cambia.
+						<br>
+						Cuadrante 2 =(Fx = - & Fy = + ), al resultado se le suman 180°.
+						<br>
+						Cuadrante 3 =(Fx = - & Fy = - ), al resultado se le suman 180°.
+						<br>
+						Cuadrante 4 =(Fx = + & Fy = - ), al resultado se le suman 360°
+						<br>
+			            <br>
+			            m = F/a
+			            <br>
+			            a = F/m
+			            <br>
+			            d= (Vi . t)+ 0.5(a)t²
+			            <br>
+			            peso = m(g)
+			            <br>
+			            v = a(t)
+			            <br>
+			            I = Fr(t)
+			            <br>
+			            W = Fx(dx)+Fy(dy)+Fz(dz)
+			            <br>
+			            P = W/t
+			            <br>
+			        	</section>
+			        </div>
+	       		</div>
+	      	</div>
+	    </div>
+	    <div id="cal" class="col s12">
+	      <div class="container">
+	        <div class="row">
+	          <h3 class="title center">
+	            Calculos
+	          </h3>
+	          <div class="row">
+	            <form class="col s12">
+	              <div class="row">
+	                <div class="input-field col s6">
+	                  <input id="ct1" type="text" class="validate">
+	                  <label for="ct1">Tiempo 1 (Segundos)</label>
+	                </div>
+	                <div class="input-field col s6">
+	                  <input id="ct2" type="text" class="validate">
+	                  <label for="ct2">Tiempo 2 (Segundos)</label>
+	                </div>
+	                <div class="input-field col s6">
+	                  <input id="cf1" type="text" class="validate">
+	                  <label for="cf1">Fuerza 1 (N)</label>
+	                </div>
+	                <div class="input-field col s6">
+	                  <input id="cf2" type="text" class="validate">
+	                  <label for="cf2">Fuerza 2 (N)</label>
+	                </div>
+	                <div class="input-field col s6">
+	                  <input id="ca1" type="text" class="validate">
+	                  <label for="ca1">Angulo 1 (°)</label>
+	                </div>
+	                <div class="input-field col s6">
+	                  <input id="ca2" type="text" class="validate">
+	                  <label for="ca2">Angulo 2 (°)</label>
+	                </div>
+	                <div class="input-field col s6">
+	                  <input id="cg" type="text" class="validate">
+	                  <label for="cg">Aceleración de Gravedad (m/s²)(9.81 o 10 o 0 si no afecta)</label>
+	                </div>
+	                <div class="input-field col s6">
+	                  <input id="cm" type="text" class="validate">
+	                  <label for="cm">Masa del Objeto (En Kilogramos)</label>
+	                </div>
+	              </div>
+	              <div class="row">
+	                <button class="btn waves-effect waves-light cyan darken-3" id="bc">Realizar calculo<i class="material-icons right">send</i></button>
+	              </div>
+	            </form>
+	            <div class="row">
+	              <div class="col s12"><div id="rc"></div></div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+		<footer class="page-footer cyan">
+			<div class="container">
+			    <div class="row">
+			      <div class="center med">Universidad de Guadalajara</div>
+			      <div class="center med">CUCEI</div>
+			    </div>
+		 	</div>
+		 	<div class="footer-copyright">
+		    	<div class="container author center med">
+		    	 ©2017 Luis Angel Muñoz Franco (<span class="med">FenixAlive</span>)
+		    	</div>
+		  	</div>
+		</footer>
+	      <!--Import jQuery before materialize.js-->
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	        <!-- Compiled and minified JavaScript -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+	    <script src="js/newton.js"></script>
+	</body>
 </html>
 
 
