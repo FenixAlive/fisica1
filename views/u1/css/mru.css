@@ -68,6 +68,9 @@ nav.nav-center ul li {
 nav.nav-center ul li a {
     display: inline-block;
 }
+.liol{
+  font-size: 13px;
+}
 @media screen and (max-width: 770px){
         *{
         font-size: 17px;
